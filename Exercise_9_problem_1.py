@@ -28,11 +28,13 @@ latitudes = [63.748023986816406, 62.90789794921875, 60.511383056640625, 60.44499
 
 # Create a list of coordinate pairs
 # YOUR CODE HERE 1 
-coordpairs=None
+##make new list "coordpairs"
+coordpairs = list(zip(longitudes,latitudes))
 
 # Create a shapely Polygon using the 'coordpairs' -list
 # YOUR CODE HERE 2 
-poly = None
+##polydonize th list "coordpairs"
+poly = Polygon(coordpairs)
 
 # CODE FOR TESTING YOUR SOLUTION
 
@@ -44,7 +46,7 @@ print(coordpairs[0])
 # Check the data type of your polygon:
 print(poly.geom_type)
 
-# **Insert the polygon into a GeoDataFrame called `geo`:**
+# **Insert the polygon into a GeoDataFrame called geo`:**
 
 # Create an empty GeoDataFrame
 geo = None
