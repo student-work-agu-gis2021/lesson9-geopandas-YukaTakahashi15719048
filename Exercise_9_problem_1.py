@@ -33,7 +33,7 @@ coordpairs = list(zip(longitudes,latitudes))
 
 # Create a shapely Polygon using the 'coordpairs' -list
 # YOUR CODE HERE 2 
-##polydonize th list "coordpairs"
+##polydonize the list "coordpairs"
 poly = Polygon(coordpairs)
 
 # CODE FOR TESTING YOUR SOLUTION
@@ -70,8 +70,9 @@ print(len(geo))
 
 # Plot the polygon. What shape is it :) ?
 # YOUR CODE HERE 4
-##plot the polygon
+##plot the polygon and show it
 geo.plot()
+geo.plt.show()
 # What can you see on the map? :) 
 
 # - save the GeoDataFrame into a Shapefile called `'polygon.shp'`. 
@@ -80,7 +81,7 @@ geo.plot()
 fp = 'polygon.shp'
 
 # YOUR CODE HERE 5
-#save
+#save the GeoDataFrame file'polygon.shp'
 geo.to_file(fp)
 # CODE FOR TESTING YOUR SOLUTION
 
