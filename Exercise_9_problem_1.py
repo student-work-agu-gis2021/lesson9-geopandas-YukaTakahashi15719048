@@ -46,7 +46,7 @@ print(coordpairs[0])
 # Check the data type of your polygon:
 print(poly.geom_type)
 
-# **Insert the polygon into a GeoDataFrame called geo`:**
+# **Insert the polygon into a GeoDataFrame called `geo`:**
 
 # Create an empty GeoDataFrame
 geo = None
