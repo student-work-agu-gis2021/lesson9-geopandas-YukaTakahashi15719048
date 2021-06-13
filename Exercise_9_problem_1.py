@@ -30,7 +30,6 @@ latitudes = [63.748023986816406, 62.90789794921875, 60.511383056640625, 60.44499
 # YOUR CODE HERE 1 
 ##make new list "coordpairs"
 coordpairs = list(zip(longitudes,latitudes))
-
 # Create a shapely Polygon using the 'coordpairs' -list
 # YOUR CODE HERE 2 
 ##polydonize the list "coordpairs"
