@@ -72,16 +72,18 @@ print(len(geo))
 ##plot the polygon and show it
 geo.plot()
 plt.show()
+
 # What can you see on the map? :) 
 
 # - save the GeoDataFrame into a Shapefile called `'polygon.shp'`. 
 
-# Save the GeoDataFrame into a new Shapefile called 'polygon.shp'.
+# Save the GeoDataFrame into a new Shapefile called "polygon.shp".
 fp = 'polygon.shp'
 
 # YOUR CODE HERE 5
 #save the GeoDataFrame file'polygon.shp'
-geo.to_file(fp)
+gpd.to_file(fp)
+
 # CODE FOR TESTING YOUR SOLUTION
 
 #Check if output file exists

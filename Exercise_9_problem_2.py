@@ -32,7 +32,7 @@ from pyproj import CRS
 
 # Convert DataFrame into a GeoDataFrame
 geo = gpd.GeoDataFrame(data, geometry='geometry', crs=CRS.from_epsg(4326).to_wkt())
-##Save the data into a Shapefile called `Kruger_posts.shp`
+##Save the data into a Shapefile called "Kruger_posts.shp"
 fp = 'Kruger_posts.shp'
 geo.to_file(fp)
 

@@ -9,14 +9,14 @@
 # YOUR CODE HERE 1 to read data
 import geopandas as gpd
 from pyproj import CRS
-##read data
+##read datafile 'Kruger_posts.shp'
 data = gpd.read_file('Kruger_posts.shp')
 
 # - Check the crs of the input data. If this information is missing, set it as epsg:4326 (WGS84).
 # - Reproject the data from WGS84 to `EPSG:32735` -projection which stands for UTM Zone 35S (UTM zone for South Africa) to transform the data into metric system. (don't create a new variable, update the existing variable `data`!)"
 
 # YOUR CODE HERE 2 to set crs
-##
+##coordinate transformation of 'data' 
 data = data.to_crs(epsg=32735)
 
 # CODE FOR TESTING YOUR SOLUTION
@@ -84,14 +84,17 @@ movements.head()
 #  - What was the maximum distance travelled in meters?
 
 # YOUR CODE HERE 6 to find max, min,mean of the distance.
-##
-print(mean(movements['distance'])) 
-print(max(movements['distance'].dropna())) 
-print(min(movements['distance'])) 
+##find max and min of distance 
+print("max of distance:",max(movements['distance'].dropna())) 
+print("min of distance:",min(movements['distance'])) 
+##!I can't find mean of distance
 
 # - Finally, save the movements of into a Shapefile called ``some_movements.shp``
 
 # YOUR CODE HERE 7 to save as Shapefile
+##save movements "some_movements.shp"
+fp = "some_movements.shp"
+movements.save(fp)
 
 # CODE FOR TESTING YOUR SOLUTION
 
