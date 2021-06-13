@@ -11,8 +11,9 @@ import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
 # YOUR CODE HERE 1 to read data
-data = None
-
+##read data
+fp = 'data/some_posts.csv'
+data = pd.read_csv(filepath_or_buffer = fp)
 
 # CODE FOR TESTING YOUR SOLUTION
 
@@ -29,6 +30,8 @@ print(data['geometry'].head())
 # YOUR CODE HERE 2
 import geopandas as gpd
 from pyproj import CRS
+#convert DataFrame into a GeoDataFrame
+geo = gpd.GeoDataFrame(data, geometry='geometry', crs=CRS.from_epsg(4326).to_wkt())
 
 # Convert DataFrame into a GeoDataFrame
 geo=None
