@@ -12,8 +12,7 @@ import geopandas as gpd
 from shapely.geometry import Point
 # YOUR CODE HERE 1 to read data
 ##read data
-fp = 'data/some_posts.csv'
-data = pd.read_csv(filepath_or_buffer = fp)
+data = pd.read_csv(filepath_or_buffer = 'data/some_posts.csv')
 
 # CODE FOR TESTING YOUR SOLUTION
 
@@ -30,11 +29,13 @@ print(data['geometry'].head())
 # YOUR CODE HERE 2
 import geopandas as gpd
 from pyproj import CRS
-##convert DataFrame into a GeoDataFrame
-geo = gpd.GeoDataFrame(data, geometry='geometry', crs=CRS.from_epsg(4326).to_wkt())
 
 # Convert DataFrame into a GeoDataFrame
-geo=None
+geo = gpd.GeoDataFrame(data, geometry='geometry', crs=CRS.from_epsg(4326).to_wkt())
+##Save the data into a Shapefile called `Kruger_posts.shp`
+fp = 'Kruger_posts.shp'
+geo.to_file(fp)
+
 # CODE FOR TESTING YOUR SOLUTION
 
 # Check the geodataframe head
