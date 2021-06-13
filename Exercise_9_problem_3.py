@@ -48,7 +48,7 @@ assert len(grouped.groups) == data["userid"].nunique(), "Number of groups should
 # YOUR CODE HERE 4 to set movements
 import pandas as pd
 from shapely.geometry import LineString, Point
-##
+##set movements
 movements = gpd.GeoDataFrame(columns=['userid', 'geometry'])
 # CODE FOR TESTING YOUR SOLUTION
 
